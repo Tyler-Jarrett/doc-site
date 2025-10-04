@@ -1,0 +1,18 @@
+[
+  {
+    "model": "collection.entry",
+    "pk": 1,
+    "fields": {
+      "name": "Tyler",
+      "password": "password123"
+    }
+  },
+  {
+    "model": "collection.entry",
+    "pk": 2,
+    "fields": {
+      "name": "test",
+      "password": "testing"
+    }
+  }
+]

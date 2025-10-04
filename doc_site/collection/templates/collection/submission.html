@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit password</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #00416b;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: #00416b;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #003456;
+    }
+  </style>
+</head>
+<body>    
+
+    <div class="form-container">
+    <h1>Password cracking demonstration</h1>
+        <h4>Please enter your name and a password similar to yours</h4>
+        <h4 style="color: red">DO NOT PUT IN YOUR ACTUAL PASSWORDS</h4>
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{ form.name }}
+        
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        {{ form.password }}
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password cracking</title>
+    <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.front-container {
+  text-align: center;
+  background: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.front-container h1 {
+  margin-bottom: 1rem;
+  color: #00416b;
+}
+
+.front-container p {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00416b;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003456;
+}
+  </style>
+</head>
+<body>
+    <div class="front-container">
+        {% if message %}
+            <h1>{{ message }}</h1>
+        {% else %}
+            <h1>Welcome to My Password Cracking Website</h1>
+        {% endif %}
+
+    <p>Click below to submit a password for cracking.</p>
+    <a href="{% url 'submission' %}" class="btn">Submit new password</a>
+  </div>
+    
+</body>
+</html>
