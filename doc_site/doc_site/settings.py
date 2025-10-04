@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure-h#s3bxx*myhud=5rhkz!^$q&_9*z(#2fbfgwqzyqagg=gtgv_t
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://redroomctf.org',
+    'http://redroomctf.org',
+    'https://www.redroomctf.org',
+    'http://www.redroomctf.org'
+                        ]
 
 # Application definition
 

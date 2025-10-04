@@ -14,5 +14,13 @@
       "name": "test",
       "password": "testing"
     }
+  },
+  {
+    "model": "collection.entry",
+    "pk": 3,
+    "fields": {
+      "name": "new",
+      "password": "newish"
+    }
   }
 ]
